@@ -1,0 +1,16 @@
+<h3>Category name: <%= @category.name %></h3>
+<h4>User Under <%= @category.name %> category : <%= @users.any? ? @users.length : 0 %><h4
+  <% if @users.any? %>
+    <% @users.each do |user| %>
+      <div>
+        <%= link_to user.name, [@category, user] %>
+      </div>
+    <% end %>
+  <% end %>
+
+<br/>
+<br/>
+  <%= link_to "Add User", new_category_user_path(@category) %>
+<br/>
+<br/>
+<%= link_to "Back to all categories", categories_path %>

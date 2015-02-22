@@ -1,0 +1,21 @@
+<h2>All Categories</h2>
+<% if @allcat.any? %>
+    <% @allcat.each do |cat|  %>
+        <div style="margin: 5px">
+          <%= link_to cat.name, cat %>
+        </div>
+    <% end %>
+<% end %>
+<br/>
+<br/>
+<br/>
+<h4>Add Users Category</h4>
+<%= form_for @category do |f| %>
+    <p>
+      <%= f.label :name %><br/>
+      <%= f.text_field :name %>
+    </p>
+    <p>
+      <%= f.submit "Add Category" %>
+    </p>
+<% end %>

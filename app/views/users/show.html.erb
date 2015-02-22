@@ -1,0 +1,45 @@
+<h3>User Name: <%= @user.name %></h3>
+<h3>Category: <%= @category.name %></h3>
+<br/>
+
+<h4>Informations about <%= @user.name %> </h4>
+<div>
+  <div style="width: 120px;float: left;">Name :</div>
+  <div style="float: left"><%= @user.name!= ''? @user.name : "Not Inserted" %></div>
+  <div style="clear: both"></div>
+</div>
+<div>
+  <div style="width: 120px;float: left;">Father's Name :</div>
+  <div style="float: left"><%= @user.father_name!= ''? @user.father_name : "Not Inserted" %></div>
+  <div style="clear: both"></div>
+</div>
+<div>
+  <div style="width: 120px;float: left;">Mother's Name :</div>
+  <div style="float: left"><%= @user.mother_name!= ''? @user.mother_name : "Not Inserted" %></div>
+  <div style="clear: both"></div>
+</div>
+<div>
+  <div style="width: 120px;float: left;">Age :</div>
+  <div style="float: left"><%= @user.age!= ''? @user.age : "Not Inserted" %></div>
+  <div style="clear: both"></div>
+</div>
+<div>
+  <div style="width: 120px;float: left;">Education :</div>
+  <div style="float: left"><%= @user.education!= ''? @user.education : "Not Inserted" %></div>
+  <div style="clear: both"></div>
+</div>
+<div>
+  <div style="width: 120px;float: left;">Email :</div>
+  <div style="float: left"><%= @user.email!= ''? @user.email : "Not Inserted" %></div>
+  <div style="clear: both"></div>
+</div>
+<div>
+  <div style="width: 120px;float: left;">Nationality :</div>
+  <div style="float: left"><%= @user.nationality!= ''? @user.nationality : "Not Inserted" %></div>
+  <div style="clear: both"></div>
+</div>
+
+<br/>
+<br/>
+<br/>
+<%= link_to "Back", category_path(@category) %>
